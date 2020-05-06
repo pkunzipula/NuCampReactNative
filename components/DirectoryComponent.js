@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { FlatList } from "react-native";
 import { ListItem } from "react-native-elements";
 import { CAMPSITES } from "../shared/campsites";
@@ -29,7 +29,7 @@ class Directory extends Component {
     };
     return (
       <FlatList
-        data={campsites}
+        data={this.state.campsites}
         renderItem={renderDirectoryItem}
         keyExtractor={(item) => item.id.toString()}
       />
